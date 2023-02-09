@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/07 18:07:46 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:31:27 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ int	my_isdigit(int c)
 	return (0);
 }
 
-int over_int(char **str)
+int	over_int(char **str)
 {
-	int i;
-	long j;
+	int		i;
+	long	j;
 
 	i = 0;
 	while (str[i])
 	{
-		j =  ft_atoi(str[i]);
+		j = ft_atoi(str[i]);
 		if (j <= INT_MIN || j >= INT_MAX)
 			return (0);
 		i++;
@@ -37,12 +37,12 @@ int over_int(char **str)
 
 int	is_integer(char *str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i])
 	{
-		if (str[0] == '-'|| str[0] == '+')
+		if (str[0] == '-' || str[0] == '+')
 			i++;
 		if (!my_isdigit(str[i]))
 			return (0);
@@ -50,7 +50,6 @@ int	is_integer(char *str)
 	}
 	return (1);
 }
-
 
 long	ft_atoi(const char *str)
 {
@@ -63,10 +62,10 @@ long	ft_atoi(const char *str)
 	res = 0;
 	while (*str)
 	{
-		if(*str == '0')
+		if (*str == '0')
 			str++;
 		else
-			break;
+			break ;
 	}
 	if (my_strlen(str) >= my_strlen("+9223372036854775807"))
 	{
@@ -85,6 +84,6 @@ long	ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] && my_isdigit(str[i]))
-		res = res * 10 + (str[i++] - 48);	
+		res = res * 10 + (str[i++] - 48);
 	return (res * sign);
 }

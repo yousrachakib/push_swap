@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/07 15:51:40 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:46:52 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ typedef struct t_list
 	struct t_list *next;
 }	t_list;
 
+// actions
+void	rrr(t_list **stack_a, t_list	**stack_b);
+void	rrotate_stack(t_list **stack, int a);
+void	swap_2top_numbers(t_list *stack, int a);
+void	ss(t_list *stack_a, t_list *stack_b);
+void	rr(t_list **stack_a, t_list	**stack_b);
+void	rotate_stack(t_list	**stack, int a);
+void	push(t_list **stack_a, t_list **stack_b, int a);
+// linked list
+t_list	*last_node(t_list	*stack);
 void	addback_node(t_list **head,t_list *newnode);
 void 	addfront_node(t_list **head, t_list *newnode);
 t_list *creat_node(t_list *node, int data);

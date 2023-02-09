@@ -6,15 +6,15 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/07 16:15:44 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/07 21:48:41 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t my_strlen(const char* str) 
+size_t	my_strlen(const char*str)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])
@@ -22,31 +22,32 @@ size_t my_strlen(const char* str)
 	return (len);
 }
 
-char	*my_strcat(char* dest, const char* src) 
+char	*my_strcat(char *dest, const char *src)
 {
-	size_t i;
-	size_t j;
-	
+	size_t	i;
+	size_t	j;
+
 	i = my_strlen(dest);
-	j = -1; 
-	while(src[++j])
-		dest[i+j] = src[j];
-    dest[i+j] = '\0';
-    return (dest);
+	j = -1;
+	while (src[++j])
+		dest[i + j] = src[j];
+	dest[i + j] = '\0';
+	return (dest);
 }
-int 	isempty(int size, char **str)
+
+int	isempty(int size, char **str)
 {
-	int i;
-	size_t j;
+	int		i;
+	size_t	j;
 
 	i = 1;
 	while (i < size)
 	{
 		j = 0;
-		while(str[i][j])
+		while (str[i][j])
 		{
 			if (str[i][j] >= '0' && str[i][j] <= '9')
-				break;
+				break ;
 			j++;
 		}
 		if (j == my_strlen(str[i]))
@@ -59,30 +60,30 @@ int 	isempty(int size, char **str)
 	return (1);
 }
 
-int    ft_total_len(char **str, char *sep, int size)
+int	ft_total_len(char **str, char *sep, int size)
 {
-    int    len;
-    int    i;
+	int	len;
+	int	i;
 
-    i = 1; //we start by 1 to not count the len of the programs name .
-    len = (size - 2) * my_strlen(sep); //we dedicate the last string so we wont add a sep at the end of the string
-    while (i < size)
-    {
-        len = len + my_strlen(str[i]);
-        i++;
-    }
-    return (len);
+	i = 1; //we start by 1 to not count the len of the programs name .
+	len = (size - 2) * my_strlen(sep); //we dedicate the last string so we wont add a sep at the end of the string
+	while (i < size)
+	{
+		len = len + my_strlen(str[i]);
+		i++;
+	}
+	return (len);
 }
 
-char *my_joint(int size, char **str, char *sep)
+char	*my_joint(int size, char **str, char *sep)
 {
-	int i;
-	int j;
-	size_t len;
-	char *result;
-	
+	int		i;
+	int		j;
+	size_t	len;
+	char	*result;
+
 	i = 1;
-	isempty(size,str);
+	isempty(size, str);
 	len = ft_total_len(str, sep, size);
 	result = malloc(sizeof(char) * len);
 	if (!result)
@@ -90,7 +91,7 @@ char *my_joint(int size, char **str, char *sep)
 	result[0] = '\0';
 	while (i < size)
 	{
-		my_strcat(result,str[i]);
+		my_strcat(result, str[i]);
 		if (i < size - 1)
 			my_strcat(result, sep);
 		i++;

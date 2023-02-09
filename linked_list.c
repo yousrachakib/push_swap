@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:54:32 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/07 17:58:44 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:16:16 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	list_size(t_list	*stack)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
-	while(!stack)
+	while (!stack)
 	{
 		counter++;
 		stack = stack->next;
@@ -25,38 +25,45 @@ int	list_size(t_list	*stack)
 	return (counter);
 }
 
-t_list *last_node(t_list	*stack)
+t_list	*last_node(t_list	*stack)
 {
 	while (stack->next)
 		stack = stack->next;
 	return (stack);
 }
 
-t_list *creat_node(t_list *node, int data)
+t_list	*creat_node(t_list *node, int data)
 {
 	node = malloc(sizeof(t_list));
 	if (!node)
-		return(NULL);
-	node->data= data;
+		return (NULL);
+	node->data = data;
 	node->next = NULL;
-	return (node);	
+	return (node);
 }
 
-void addback_node(t_list **head,t_list *newnode)
+void	addback_node(t_list **head, t_list *newnode)
 {
-	t_list *temp; 
+	t_list	*temp;
+
 	temp = *head;
 	if (!*head)
 	{
 		*head = newnode;
-		return ;	
+		return ;
 	}
 	last_node(temp)->next = newnode;
 }
 
-void addfront_node(t_list **head, t_list *newnode)
+void	addfront_node(t_list **head, t_list *newnode)
 {
+	
 	if (!*head)
+	{
 		*head = newnode;
+		newnode->next = NULL;
+		return ;
+	}
 	newnode->next = *head;
+	*head = newnode;
 }
