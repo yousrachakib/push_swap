@@ -6,11 +6,11 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:05:33 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/09 18:56:42 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:20:28 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	rotate_stack(t_list	**stack,int a)
 {
@@ -47,6 +47,7 @@ void	rrotate_stack(t_list **stack, int a)
 	while(temp->next->next) // before the last node
 		temp = temp->next;
 	temp->next = NULL;
+	
 	addfront_node(stack,head);
 	if (a == 0)
 		ft_putstr_fd("rrb\n", 1);

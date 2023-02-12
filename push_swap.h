@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/09 18:46:52 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/12 22:07:35 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ typedef struct t_list
 	struct t_list *next;
 }	t_list;
 
+//Algo
+int get_position(t_list  **stack, int data);
+void	sort_5numbers(t_list **stack_a, t_list **stack_b);
+void	sort_3numbers(t_list **stack);
+int	return_minvalue(t_list	*stack);
+int	return_maxvalue(t_list	*stack);
 // actions
 void	rrr(t_list **stack_a, t_list	**stack_b);
 void	rrotate_stack(t_list **stack, int a);
@@ -35,10 +41,11 @@ void	rr(t_list **stack_a, t_list	**stack_b);
 void	rotate_stack(t_list	**stack, int a);
 void	push(t_list **stack_a, t_list **stack_b, int a);
 // linked list
+int	list_size(t_list	*stack);
 t_list	*last_node(t_list	*stack);
 void	addback_node(t_list **head,t_list *newnode);
 void 	addfront_node(t_list **head, t_list *newnode);
-t_list *creat_node(t_list *node, int data);
+t_list	*creat_node(int data);
 //parcing functions
 void	ft_putstr_fd(char *str, int fd);
 int over_int(char **str);

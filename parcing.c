@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/09 19:01:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/12 22:57:42 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	parcing(char *join, t_list **mystack)
 	i = -1;
 	while (split[++i] != NULL)
 	{
-		node = creat_node(node, ft_atoi(split[i]));
+		node = creat_node(ft_atoi(split[i]));
 		addback_node(mystack, node);
 	}
 }
@@ -74,22 +74,23 @@ int	main(int ac, char **av)
 	char	**split;
 
 	stack_b = NULL;
+	stack_a = NULL;
 	if (ac == 1)
 		exit (0);
 	str = my_joint(ac, av, " ");
-	stack_a = NULL;
 	parcing(str, &stack_a);
-	ss(stack_a,stack_b);
-	printf("///////////////\n");
+	// printf("%d\n", return_minvalue(stack_a));
+	// printf("%d\n",get_position(&stack_a, return_minvalue(stack_a)));	
+	sort_5numbers(&stack_a,&stack_b);
 	while (stack_a)
 	{	
 		printf("%d\n", stack_a->data);
 		stack_a = stack_a->next;
 	}
-	// printf("///////////////\n");
-	// while (stack_b)
-	// {	
-	// 	printf("%d\n", stack_b->data);
-	// 	stack_b = stack_b->next;
-	// }
-}
+	printf("///////////////\n");
+	while (stack_b)
+	{	
+		printf("%d\n", stack_b->data);
+		stack_b = stack_b->next;
+	}
+ }

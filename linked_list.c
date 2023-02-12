@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:54:32 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/08 18:16:16 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/12 18:07:26 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	list_size(t_list	*stack)
 	int	counter;
 
 	counter = 0;
-	while (!stack)
+	while (stack)
 	{
 		counter++;
 		stack = stack->next;
@@ -32,8 +32,10 @@ t_list	*last_node(t_list	*stack)
 	return (stack);
 }
 
-t_list	*creat_node(t_list *node, int data)
+t_list	*creat_node(int data)
 {
+	t_list *node;
+	
 	node = malloc(sizeof(t_list));
 	if (!node)
 		return (NULL);
@@ -57,6 +59,9 @@ void	addback_node(t_list **head, t_list *newnode)
 
 void	addfront_node(t_list **head, t_list *newnode)
 {
+	t_list *temp;
+
+	temp =  *head;
 	
 	if (!*head)
 	{
@@ -64,6 +69,6 @@ void	addfront_node(t_list **head, t_list *newnode)
 		newnode->next = NULL;
 		return ;
 	}
-	newnode->next = *head;
+	newnode->next = temp; 
 	*head = newnode;
 }
