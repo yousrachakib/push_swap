@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/13 01:52:50 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/16 21:55:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,18 @@
 // linkedlist functions
 typedef struct t_list
 {
+	int index;
 	int data;
 	struct t_list *next;
 }	t_list;
 
 //Algo
+int	return_min_index(t_list	*stack);
+void add_index_to_node(t_list	*stack);
+void reset_index(t_list	*stack);
+void add_indextonode(t_list	**stack);
 int get_position(t_list  *stack,int	minimum);
+void	sort_100numbers(t_list	**stack_a, t_list	**stack_b);
 void	sort_5numbers(t_list **stack_a, t_list **stack_b);
 void	sort_3numbers(t_list **stack);
 int	return_minvalue(t_list	*stack);

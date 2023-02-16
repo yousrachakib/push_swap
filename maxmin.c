@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:58:44 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/12 17:30:24 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/16 21:46:52 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ int	return_maxvalue(t_list	*stack)
 int	return_minvalue(t_list	*stack)
 {
 	t_list	*temp;
+	t_list	*index;
 	int		value;
 	
 	value = stack->data;
+	index = stack;
 	temp = stack; 
 	while(temp)
 	{
