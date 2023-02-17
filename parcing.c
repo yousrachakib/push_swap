@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/16 21:19:36 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/17 19:58:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ int	main(int ac, char **av)
 		exit (0);
 	str = my_joint(ac, av, " ");
 	parcing(str, &stack_a);
-	// sort_100numbers(&stack_a,&stack_b);
 	add_index_to_node(stack_a);
+	sort_100numbers(&stack_a,&stack_b);
 	while (stack_a)
 	{	
-		printf("%d\n", stack_a->index);
+		printf("%d\n", stack_a->data);
 		stack_a = stack_a->next;
 	}
 	// printf("//////////////////\n");
