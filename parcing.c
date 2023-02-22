@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/17 19:58:51 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:10:19 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,11 @@ int	main(int ac, char **av)
 	parcing(str, &stack_a);
 	add_index_to_node(stack_a);
 	sort_100numbers(&stack_a,&stack_b);
-	while (stack_a)
-	{	
-		printf("%d\n", stack_a->data);
-		stack_a = stack_a->next;
-	}
+	// while (stack_a)
+	// {	
+	// 	printf("%d\n", stack_a->data);
+	// 	stack_a = stack_a->next;
+	// }
 	// printf("//////////////////\n");
 	// while (stack_b)
 	// {	
