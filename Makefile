@@ -12,7 +12,7 @@ SRCS = args_to_int.c \
 	   sort100numbers.c \
 	   split_args.c \
 	   swap.c \
-
+	   sort500numbers.c
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -25,7 +25,7 @@ $(NAME) : $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o : %.c $(HEADER)
-		$(CC) $(CFLAGS) -c $< -o $@
+		@$(CC) $(CFLAGS) -c $< -o $@
 
 clean : 
 		rm -rf $(OBJS)
