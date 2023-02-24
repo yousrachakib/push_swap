@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/22 17:10:19 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:31:53 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	parcing(char *join, t_list **mystack)
 	t_list	*node;
 	char	**split;
 	int		i;
-	int		j;
 
 	split = my_split(join, ' ');
 	i = -1;
@@ -71,7 +70,6 @@ int	main(int ac, char **av)
 	t_list	*stack_a;
 	t_list *stack_b;
 	char	*str;
-	char	**split;
 
 	stack_b = NULL;
 	stack_a = NULL;
@@ -79,6 +77,7 @@ int	main(int ac, char **av)
 		exit (0);
 	str = my_joint(ac, av, " ");
 	parcing(str, &stack_a);
+	// printf("%d",check_befor_maxpos(stack_a));
 	add_index_to_node(stack_a);
 	sort_100numbers(&stack_a,&stack_b);
 	// while (stack_a)

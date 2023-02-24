@@ -6,14 +6,14 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 23:17:27 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/17 20:59:17 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/24 16:57:21 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	sort_5numbers(t_list **stack_a, t_list **stack_b)
-{	
+{
 	int pos;
 	int min;
 	

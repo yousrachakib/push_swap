@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/13 16:28:14 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:29:50 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ int	ft_total_len(char **str, char *sep, int size)
 char	*my_joint(int size, char **str, char *sep)
 {
 	int		i;
-	int		j;
 	size_t	len;
 	char	*result;
 
