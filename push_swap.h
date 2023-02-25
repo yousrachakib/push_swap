@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/24 21:36:23 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:04:15 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct t_list
 }	t_list;
 
 //Algo
-int		check_befor_maxpos(t_list	*stack);
 int		return_min_index(t_list	*stack);
 void 	add_index_to_node(t_list	*stack);
 void 	reset_index(t_list	*stack);

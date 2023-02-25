@@ -6,45 +6,20 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 20:58:23 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/24 21:55:26 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/25 22:07:27 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	check_befor_maxpos(t_list	*stack)
-{
-	int	b_max;
-    int pos_bmax;
-    int pos_max;
-	int max;
-	int size;
-	
-    
-	size = list_size(stack);
-	b_max = before_max(stack);
-	max = return_maxvalue(stack);
-    pos_bmax = get_position(stack,b_max);
-    pos_max = get_position(stack, max);
-	// while(stack)
-	// {
-    if ( pos_bmax < pos_max &&  pos_bmax <= (size / 2) && pos_max <= (size / 2))
-        return (1);	
-    else if (pos_bmax > pos_max &&  pos_bmax >= (size / 2) && pos_max >= (size / 2))
-        return (2);
-	// 	stack = stack->next;
-	// }
-	return (0);
-}
 
 void	sort_500numbers(t_list	**stack_a, t_list	**stack_b)
 {
 	int chunk;
 	int nextchunk;
 	int i;
-
+	
 	i = 1;
-	chunk = list_size(*stack_a) / 9;
+	chunk = list_size(*stack_a) / 10;
 	nextchunk = chunk;
 
 	while (*stack_a)
