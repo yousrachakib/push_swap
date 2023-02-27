@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 18:18:51 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/27 21:13:10 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	is_integer(char *str)
 	return (1);
 }
 
-long	ft_atoi(const char *str)
+long	ft_atoi(char *str)
 {
 	long	i;
 	long	sign;

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 18:11:45 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/27 21:13:24 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ void	ft_putstr_fd(char *str, int fd);
 int 	over_int(char **str);
 int		my_isdigit(int c);
 char	**my_split(char const *s, char c);
-size_t 	my_strlen(const char* str);
+size_t 	my_strlen(char* str);
 char	*my_strcat(char* dest, const char* src);
 int    	ft_total_len(char **strs, char *sep, int size);
 char 	*my_joint(int size, char **str, char *sep);
 int		is_integer(char *str);
 int		my_isdigit(int c);
-long	ft_atoi(const char *str);
+long	ft_atoi(char *str);
 
 #endif
