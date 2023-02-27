@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/25 22:04:15 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:11:45 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	addback_node(t_list **head,t_list *newnode);
 void 	addfront_node(t_list **head, t_list *newnode);
 t_list	*creat_node(int data);
 //parcing functions
+int	_free(char **res);
 void	ft_putstr_fd(char *str, int fd);
 int 	over_int(char **str);
 int		my_isdigit(int c);

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/13 16:40:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:18:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ long	ft_atoi(const char *str)
 	}
 	if (my_strlen(str) >= my_strlen("+9223372036854775807"))
 	{
+		free(str);
 		ft_putstr_fd("Error", 2);
 		exit (1);
 	}

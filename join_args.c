@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/24 17:42:44 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:19:22 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	isempty(int size, char **str)
 		}
 		if (j == my_strlen(str[i]))
 		{
+			free(str);
 			ft_putstr_fd("Error\n", 2);
 			exit (1);
 		}
