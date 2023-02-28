@@ -6,13 +6,13 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 21:13:58 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:35:04 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	my_strlen(char*str)
+size_t	my_strlen(const char*str)
 {
 	size_t	len;
 
@@ -52,7 +52,6 @@ int	isempty(int size, char **str)
 		}
 		if (j == my_strlen(str[i]))
 		{
-			free(str);
 			ft_putstr_fd("Error\n", 2);
 			exit (1);
 		}

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/26 23:09:46 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 23:14:38 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ int	duplicate(char **split)
 
 	i = -1;
 	while (split[++i] != NULL)
-	array = malloc(sizeof(int) * i);
-	i = -1;
-	while (split[++i])
-		array[i] = ft_atoi(split[i]);
 	len = i;
 	i = -1;
 	while (++i < len)
@@ -32,7 +28,7 @@ int	duplicate(char **split)
 		j = i + 1;
 		while (j < len)
 		{
-			if (array[i] == array[j])
+			if (ft_atoi(split[i]) == ft_atoi(split[j]))
 				return (0);
 			j++;
 		}

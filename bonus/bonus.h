@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:54:47 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 18:07:32 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 19:56:36 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct t_list
 	int data;
 	struct t_list *next;
 }	t_list;
+
 
 char	**my_split(char const *s, char c);
 t_list	*creat_node(int data);

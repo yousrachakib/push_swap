@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 21:13:24 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:21:39 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct t_list
 }	t_list;
 
 //Algo
+void	free_stack(t_list	*stack);
 int		return_min_index(t_list	*stack);
 void 	add_index_to_node(t_list	*stack);
 void 	reset_index(t_list	*stack);
@@ -55,12 +56,12 @@ void	addback_node(t_list **head,t_list *newnode);
 void 	addfront_node(t_list **head, t_list *newnode);
 t_list	*creat_node(int data);
 //parcing functions
-int	_free(char **res);
+int		split_free(char **res);
 void	ft_putstr_fd(char *str, int fd);
 int 	over_int(char **str);
 int		my_isdigit(int c);
 char	**my_split(char const *s, char c);
-size_t 	my_strlen(char* str);
+size_t 	my_strlen(const char* str);
 char	*my_strcat(char* dest, const char* src);
 int    	ft_total_len(char **strs, char *sep, int size);
 char 	*my_joint(int size, char **str, char *sep);

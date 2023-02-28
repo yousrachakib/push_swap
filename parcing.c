@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 21:11:16 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 23:13:45 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ int	duplicate(char **split)
 
 	i = -1;
 	while (split[++i] != NULL)
-	array = malloc(sizeof(int) * i);
-	i = -1;
-	while (split[++i])
-		array[i] = ft_atoi(split[i]);
 	len = i;
 	i = -1;
 	while (++i < len)
@@ -32,7 +28,7 @@ int	duplicate(char **split)
 		j = i + 1;
 		while (j < len)
 		{
-			if (array[i] == array[j])
+			if (ft_atoi(split[i]) == ft_atoi(split[j]))
 				return (0);
 			j++;
 		}
@@ -50,14 +46,13 @@ void	parcing(char *join, t_list **mystack)
 	int		i;
 
 	split = my_split(join, ' ');
-	free (join);
 	i = -1;
 	while (split[++i] != NULL)
 	{
 		if (is_integer(split[i]) == 0 || over_int(split) == 0
 			|| duplicate(split) == 0)
 		{
-			_free(split);
+			split_free(split);
 			ft_putstr_fd("Error\n", 2);
 			exit (1);
 		}
@@ -65,10 +60,26 @@ void	parcing(char *join, t_list **mystack)
 	i = -1;
 	while (split[++i] != NULL)
 	{
-		node = creat_node(ft_atoi(split[i]));
-		addback_node(mystack, node);
+		// ???
+		// node = creat_node(ft_atoi(split[i]));
+		// addback_node(mystack, node);
 	}
-	_free(split);
+	split_free(split);
+}
+void	free_stack(t_list	*stack)
+{
+	t_list	*temp;
+	t_list	*head;
+
+
+	head = stack;
+	while (head)
+	{
+		temp = head->next;
+		free(head);
+		head = temp;
+	}
+	head = NULL;
 }
 
 int	main(int ac, char **av)
@@ -83,10 +94,11 @@ int	main(int ac, char **av)
 		exit (0);
 	str = my_joint(ac, av, " ");
 	parcing(str, &stack_a);
-	add_index_to_node(stack_a);
-	if (list_size(stack_a) < 3)
-		
-	sort_100numbers(&stack_a, &stack_b);
+	free(str);
+	// add_index_to_node(stack_a);
+	// sort_5numbers(&stack_a,&stack_b);
+	free_stack(stack_a);
+	free_stack(stack_b);
 	// while (stack_a)
 	// {	
 	// 	printf("%d\n", stack_a->data);
@@ -98,7 +110,6 @@ int	main(int ac, char **av)
 	// 	printf("%d\n", stack_b->data);
 	// 	stack_b = stack_b->next;
 	// }
-		atexit(leak);
-
-	
+	atexit(leak);
+	return (0);
  }

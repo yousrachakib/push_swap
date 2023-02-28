@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:42:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 18:16:28 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/02/28 21:25:21 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,17 @@ static	char	*ft_word(char *s, char c, char **word)
 	return (s);
 }
 
-int	_free(char **res)
+int	split_free(char **res)
 {
 	int i = 0;
 	while (res[i])
 	{
 		free(res[i]);
+		res[i] = NULL;
 		i++;
 	}
 	free(res);
+	res = NULL;
 	return (0);
 }
 
@@ -99,7 +101,7 @@ char	**my_split(char const *s, char c)
 	{
 		s = ft_word((char *)s, c, res + i);
 		if (!s)
-			_free(res);
+			split_free(res);
 		i++;
 	}
 	return (res);
