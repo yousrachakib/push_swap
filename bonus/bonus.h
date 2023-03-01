@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:54:47 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 01:38:43 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 15:57:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,14 @@ typedef struct t_list
 	struct t_list	*next;
 }	t_list;
 
+void	skip_zeroes(char	*str);
 char	**my_split(char const *s, char c);
 t_list	*creat_node(int data);
 void	ft_putstr_fd(char *str, int fd);
 void	addfront_node(t_list **head, t_list *newnode);
 int		over_int(char **str);
 int		is_integer(char *str);
-long	ft_atoi(const char *str);
+long	ft_atoi(char *str);
 size_t	my_strlen(const char*str);
 char	*my_strcat(char *dest, const char *src);
 int		isempty(int size, char **str);

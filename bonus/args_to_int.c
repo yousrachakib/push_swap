@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 01:38:33 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 15:57:04 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	is_integer(char *str)
 	return (1);
 }
 
-long	ft_atoi(const char *str)
+long	ft_atoi(char *str)
 {
 	long	i;
 	long	sign;
@@ -69,13 +69,7 @@ long	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while (*str)
-	{
-		if (*str == '0')
-			str++;
-		else
-			break ;
-	}
+	skip_zeroes(str);
 	over_long(str);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
@@ -83,10 +77,8 @@ long	ft_atoi(const char *str)
 		&& (str[i + 1] == '+' || str[i + 1] == '-' ))
 		return (0);
 	while (str[i] == '+' || str[i] == '-')
-	{
 		if (str[i++] == '-')
 			sign *= -1;
-	}
 	while (str[i] && my_isdigit(str[i]))
 		res = res * 10 + (str[i++] - 48);
 	return (res * sign);
