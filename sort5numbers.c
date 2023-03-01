@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 23:17:27 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/24 16:57:21 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 19:14:57 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	sort_5numbers(t_list **stack_a, t_list **stack_b)
 {
-	int pos;
-	int min;
-	
-	while(list_size(*stack_a) > 3)
+	int	pos;
+	int	min;
+
+	while (list_size(*stack_a) > 3)
 	{
-		min = return_minvalue(*stack_a) ;
+		min = return_minvalue(*stack_a);
 		pos = get_position(*stack_a, min);
-		while ((*stack_a)->data != min )
+		while ((*stack_a)->data != min)
 		{
 			if (pos > (list_size(*stack_a) / 2))
 				rrotate_stack(stack_a, 1);
@@ -35,9 +35,9 @@ void	sort_5numbers(t_list **stack_a, t_list **stack_b)
 		push(stack_a, stack_b, 0);
 }
 
-int get_position(t_list  *stack,int	num)
+int	get_position(t_list	*stack, int num)
 {
-	int index;
+	int	index;
 
 	index = 0;
 	while (stack->data != num)
@@ -46,4 +46,4 @@ int get_position(t_list  *stack,int	num)
 		stack = stack->next;
 	}
 	return (index);
-} 
+}

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:54:32 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/16 21:41:49 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 19:03:54 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ t_list	*last_node(t_list	*stack)
 
 t_list	*creat_node(int data)
 {
-	t_list *node;
-	
+	t_list	*node;
+
 	node = malloc(sizeof(t_list));
 	if (!node)
 		return (NULL);

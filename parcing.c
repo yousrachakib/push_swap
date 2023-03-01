@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 16:19:07 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:11:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	duplicate(char **split)
 	while (split[++i] != NULL)
 	len = i;
 	i = -1;
-	while (++i <= len)
+	while (++i < len)
 	{
 		j = i + 1;
-		while (j <= len)
+		while (j < len)
 		{
 			if (ft_atoi(split[i]) == ft_atoi(split[j]))
 				return (0);
@@ -34,10 +34,10 @@ int	duplicate(char **split)
 	}
 	return (1);
 }
-// void leak()
-// {
-// 	system("leaks push_swap");
-// }
+void leak()
+{
+	system("leaks push_swap");
+}
 void	parcing(char *join, t_list **mystack)
 {
 	t_list	*node;
@@ -108,6 +108,6 @@ int	main(int ac, char **av)
 	// 	printf("%d\n", stack_b->data);
 	// 	stack_b = stack_b->next;
 	// }
-	// atexit(leak);
+	atexit(leak);
 	return (0);
  }

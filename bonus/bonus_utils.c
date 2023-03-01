@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 22:04:43 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 15:56:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:24:58 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,4 @@ t_list	*creat_node(int data)
 	node->data = data;
 	node->next = NULL;
 	return (node);
-}
-
-void	skip_zeroes(char	*str)
-{
-	while (*str)
-	{
-		if (*str == '0')
-			str++;
-		else
-			break ;
-	}
 }

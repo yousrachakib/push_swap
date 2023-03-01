@@ -6,11 +6,20 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/28 19:59:26 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:27:41 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	over_long(char	*str)
+{
+	if (my_strlen(str) >= my_strlen("+9223372036854775807"))
+	{
+		ft_putstr_fd("Error", 2);
+		exit (1);
+	}	
+}
 
 int	my_isdigit(int c)
 {
@@ -42,7 +51,7 @@ int	is_integer(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (*str== '-' || *str == '+')
+		if (*str == '-' || *str == '+')
 			str++;
 		if (!my_isdigit(str[i]))
 			return (0);
@@ -60,21 +69,10 @@ long	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while (*str)
-	{
-		if (*str == '0')
-			str++;
-		else
-			break ;
-	}
-	if (my_strlen(str) >= my_strlen("+9223372036854775807"))
-	{
-		free(str);
-		ft_putstr_fd("Error", 2);
-		exit (1);
-	}
+	skip_zeros(str);
+	over_long(str);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;	
+		i++;
 	while ((str[i] == '+' || str[i] == '-' )
 		&& (str[i + 1] == '+' || str[i + 1] == '-' ))
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:48:33 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/07 15:51:06 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 19:07:33 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (str[i])
 	{

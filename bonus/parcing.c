@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 16:14:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:26:16 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@ int	duplicate(char **split)
 	int	j;
 	int	len;
 
-	i = 0;
-	while (split[i] != NULL)
-		i++;
+	i = -1;
+	while (split[++i] != NULL)
 	len = i;
 	i = -1;
-	while (++i <= len)
+	while (++i < len)
 	{
 		j = i + 1;
-		while (j <= len)
+		while (j < len)
 		{
 			if (ft_atoi(split[i]) == ft_atoi(split[j]))
 				return (0);

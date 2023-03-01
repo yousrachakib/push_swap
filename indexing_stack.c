@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 19:43:09 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/28 21:28:45 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 19:03:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int	return_min_index(t_list	*stack)
 	t_list	*temp;
 	t_list	*temp1;
 	int		value;
-	
+
 	temp1 = stack;
-	temp = stack; 
-	
+	temp = stack;
+
 	while (temp1)
 	{
 		if (temp1->index == -1)
 		{
 			value = temp1->data;
-			break;
+			break ;
 		}
 		temp1 = temp1->next;
 	}
-	
-	while(temp)
+
+	while (temp)
 	{
 		if (temp->data < value && temp->index == -1)
 			value = temp->data;
@@ -40,7 +40,7 @@ int	return_min_index(t_list	*stack)
 	return (value);
 }
 
-void reset_index(t_list	*stack)
+void	reset_index(t_list	*stack)
 {
 	int	index;
 
@@ -52,17 +52,16 @@ void reset_index(t_list	*stack)
 	}
 }
 
-void add_index_to_node(t_list	*stack)
+void	add_index_to_node(t_list	*stack)
 {
-	int index;
-	int size;
+	int		index;
+	int		size;
 	t_list	*temp;
 
-	
 	index = 0;
 	reset_index(stack);
 	size = list_size(stack);
-	while(size != 0)
+	while (size != 0)
 	{
 		temp = stack;
 		while (temp != NULL)

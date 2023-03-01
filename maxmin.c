@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:58:44 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/23 15:41:21 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 19:04:51 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	return_maxvalue(t_list	*stack)
 {
 	t_list	*temp;
 	int		value;
-	
+
 	value = stack->data;
-	temp = stack; 
-	while(temp)
+	temp = stack;
+	while (temp)
 	{
 		if (temp->data > value)
 			value = temp->data;
@@ -27,14 +27,15 @@ int	return_maxvalue(t_list	*stack)
 	}
 	return (value);
 }
+
 int	return_minvalue(t_list	*stack)
 {
 	t_list	*temp;
 	int		value;
-	
+
 	value = stack->data;
-	temp = stack; 
-	while(temp)
+	temp = stack;
+	while (temp)
 	{
 		if (temp->data < value)
 			value = temp->data;
@@ -43,11 +44,11 @@ int	return_minvalue(t_list	*stack)
 	return (value);
 }
 
-int before_max(t_list	*stack)
+int	before_max(t_list	*stack)
 {
 	t_list	*temp;
 	int		value;
-	
+
 	value = stack->data;
 	temp = stack;
 	while (temp)
