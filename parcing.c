@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/28 23:13:45 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:11:37 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	duplicate(char **split)
 {
 	int	i;
 	int	j;
-	int	*array;
 	int	len;
 
 	i = -1;
@@ -60,9 +59,8 @@ void	parcing(char *join, t_list **mystack)
 	i = -1;
 	while (split[++i] != NULL)
 	{
-		// ???
-		// node = creat_node(ft_atoi(split[i]));
-		// addback_node(mystack, node);
+		node = creat_node(ft_atoi(split[i]));
+		addback_node(mystack, node);
 	}
 	split_free(split);
 }
@@ -95,8 +93,8 @@ int	main(int ac, char **av)
 	str = my_joint(ac, av, " ");
 	parcing(str, &stack_a);
 	free(str);
-	// add_index_to_node(stack_a);
-	// sort_5numbers(&stack_a,&stack_b);
+	add_index_to_node(stack_a);
+	sort_5numbers(&stack_a,&stack_b);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	// while (stack_a)

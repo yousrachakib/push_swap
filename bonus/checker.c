@@ -6,51 +6,51 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/26 23:46:42 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:47:42 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bonus.h"
 
-int   my_strcmp(char *s1, char *s2)
+int	my_strcmp(char *s1, char *s2)
 {
-    int i;
-    
-    i = 0;
-    while (s1[i] && s1[i] == s2[i])
-        i++;
-    return (s1[i] - s2[i]);
+	int	i;
+
+	i = 0;
+	while (s1[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
 void    apply_one_action(t_list **stack_a, t_list **stack_b, char *action)
 {
-    if (my_strcmp(action, "pa\n") == 0)
-        push(stack_a, stack_b, 1, 3); // fixed
-    else if(my_strcmp(action, "pa\n") == 0)
-        push(stack_a, stack_b, 0, 3);  // fixed
-    else if(my_strcmp(action, "ra\n") == 0)
-        rotate_stack(stack_a, 3); // fixed
-    else if(my_strcmp(action, "rb\n") == 0)
-        rotate_stack(stack_b, 3); // fixed
-    else if(my_strcmp(action, "rr\n") == 0)
-        rr(stack_a, stack_b ,0); // fixed
-    else if(my_strcmp(action, "rra\n") == 0)
-        rrotate_stack(stack_a, 3); // fixed
-    else if(my_strcmp(action, "rrb\n") == 0)
-        rrotate_stack(stack_b, 3); // fixed
-    else if(my_strcmp(action, "rrr\n") == 0)
-        rrr(stack_a, stack_b ,0); // fixed
-    else if(my_strcmp(action, "sa\n") == 0)
-        swap_2top_numbers(*stack_a,3); // fixed
-    else if(my_strcmp(action, "sb\n") == 0)
-        swap_2top_numbers(*stack_b ,3); // fixed
-    else if(my_strcmp(action, "ss\n") == 0)
-        ss(*stack_a, *stack_b ,3); // fixed
-    else 
-    {
-        ft_putstr_fd("Error\n", 2);
-        exit (1);        
-    }
+	if (my_strcmp(action, "pa\n") == 0)
+		push(stack_a, stack_b, 1, 3);
+	else if (my_strcmp(action, "pa\n") == 0)
+		push(stack_a, stack_b, 0, 3);
+	else if (my_strcmp(action, "ra\n") == 0)
+		rotate_stack(stack_a, 3);
+	else if (my_strcmp(action, "rb\n") == 0)
+		rotate_stack(stack_b, 3);
+	else if (my_strcmp(action, "rr\n") == 0)
+		rr(stack_a, stack_b, 0);
+	else if (my_strcmp(action, "rra\n") == 0)
+		rrotate_stack(stack_a, 3);
+	else if (my_strcmp(action, "rrb\n") == 0)
+		rrotate_stack(stack_b, 3);
+	else if (my_strcmp(action, "rrr\n") == 0)
+		rrr(stack_a, stack_b, 0);
+	else if (my_strcmp(action, "sa\n") == 0)
+		swap_2top_numbers(*stack_a, 3);
+	else if (my_strcmp(action, "sb\n") == 0)
+		swap_2top_numbers(*stack_b, 3);
+	else if (my_strcmp(action, "ss\n") == 0)
+		ss(*stack_a, *stack_b,3);
+	else
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit (1);
+	}
 }
 
 int stack_storted(t_list *stack)

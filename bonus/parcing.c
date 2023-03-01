@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/28 23:14:38 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:26:16 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	duplicate(char **split)
 {
 	int	i;
 	int	j;
-	int	*array;
 	int	len;
 
 	i = -1;
