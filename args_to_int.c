@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 18:27:41 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:50:56 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ long	ft_atoi(char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	skip_zeros(str);
+	skip_zeroes(str);
 	over_long(str);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;

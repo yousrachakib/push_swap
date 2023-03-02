@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 19:30:09 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/02 01:28:12 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ typedef struct t_list
 }	t_list;
 
 //Algo
-void	push_back(t_list	**stack_b, t_list	**stack_a);
+int		stack_storted(t_list *stack);
+void	push_back_to_a(t_list	**stack_b, t_list	**stack_a);
 void	free_stack(t_list	*stack);
 int		return_min_index(t_list	*stack);
 void	add_index_to_node(t_list	*stack);
 void	reset_index(t_list	*stack);
 void	add_indextonode(t_list	**stack);
 int		get_position(t_list *stack, int num);
-void	sort_500numbers(t_list	**stack_a, t_list	**stack_b);
-void	sort_100numbers(t_list	**stack_a, t_list	**stack_b);
+void	sort_500numbers(t_list	**stack_a, t_list	**stack_b, int size);
+void	sort_100numbers(t_list	**stack_a, t_list	**stack_b, int size);
 void	sort_5numbers(t_list **stack_a, t_list **stack_b);
 void	sort_3numbers(t_list **stack);
-int		before_max(t_list	*stack);
 int		return_minvalue(t_list	*stack);
 int		return_maxvalue(t_list	*stack);
 // actions

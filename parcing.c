@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 01:11:37 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/02 01:38:03 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	duplicate(char **split)
 	int	len;
 
 	i = -1;
-	while (split[++i] != NULL)
+	while (split[++i] != NULL);
 	len = i;
 	i = -1;
 	while (++i < len)
@@ -34,10 +34,10 @@ int	duplicate(char **split)
 	}
 	return (1);
 }
-void leak()
-{
-	system("leaks push_swap");
-}
+// void leak()
+// {
+// 	system("leaks push_swap");
+// }
 void	parcing(char *join, t_list **mystack)
 {
 	t_list	*node;
@@ -84,6 +84,7 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list *stack_b;
+	int		size;
 	char	*str;
 
 	stack_b = NULL;
@@ -94,7 +95,23 @@ int	main(int ac, char **av)
 	parcing(str, &stack_a);
 	free(str);
 	add_index_to_node(stack_a);
-	sort_5numbers(&stack_a,&stack_b);
+	size = list_size(stack_a);
+	
+	if (ac <= 2 || stack_storted(stack_a) == 1)
+		exit (0);
+	if (size == 2)
+	{
+		if (stack_a->data > stack_a->next->data)
+			swap_2top_numbers(stack_a, 0);
+	}
+	else if (size == 3)
+		sort_3numbers(&stack_a);
+	else if (size >= 4 && size <= 30)
+		sort_5numbers(&stack_a, &stack_b);
+	else if (size >= 31 && size <= 210)
+		sort_100numbers(&stack_a, &stack_b, size);
+	else
+		sort_500numbers(&stack_a, &stack_b, size);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	// while (stack_a)
@@ -108,6 +125,6 @@ int	main(int ac, char **av)
 	// 	printf("%d\n", stack_b->data);
 	// 	stack_b = stack_b->next;
 	// }
-	atexit(leak);
+	// atexit(leak);
 	return (0);
  }

@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:54:32 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 19:03:54 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:33:11 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,16 @@ void	addback_node(t_list **head, t_list *newnode)
 
 void	addfront_node(t_list **head, t_list *newnode)
 {
-	t_list *temp;
+	t_list	*temp;
 
-	temp =  *head;
-	
+	temp = *head;
+
 	if (!*head)
 	{
 		*head = newnode;
 		newnode->next = NULL;
 		return ;
 	}
-	newnode->next = temp; 
+	newnode->next = temp;
 	*head = newnode;
 }

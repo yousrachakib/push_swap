@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 16:42:33 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 18:29:31 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:43:39 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	swap_2top_numbers(t_list *stack, int a)
 {
 	int	tmp;
-	
+
 	if (!stack || stack->next == NULL)
-		return ;	
+		return ;
 	tmp = stack->data;
 	stack->data = stack->next->data;
 	stack->next->data = tmp;
@@ -33,4 +33,15 @@ void	ss(t_list *stack_a, t_list *stack_b, int flag)
 	swap_2top_numbers(stack_b, 3);
 	if (flag == 1)
 		ft_putstr_fd("ss\n", 1);
+}
+
+void	skip_zeroes(char	*str)
+{
+	while (*str)
+	{
+		if (*str == '0')
+			str++;
+		else
+			break ;
+	}
 }

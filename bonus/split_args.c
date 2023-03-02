@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:42:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/27 18:16:00 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:43:16 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ static	char	*ft_word(char *s, char c, char **word)
 
 int	_free(char **res)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (res[i])
 	{
 		free(res[i]);

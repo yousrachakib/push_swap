@@ -6,13 +6,13 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 18:28:57 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:51:42 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	my_strlen(const char*str)
+size_t	my_strlen(char	*str)
 {
 	size_t	len;
 
@@ -22,7 +22,7 @@ size_t	my_strlen(const char*str)
 	return (len);
 }
 
-char	*my_strcat(char *dest, const char *src)
+char	*my_strcat(char *dest,char *src)
 {
 	size_t	i;
 	size_t	j;

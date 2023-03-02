@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/26 23:10:01 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 22:41:35 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ int	ft_total_len(char **str, char *sep, int size)
 	int	len;
 	int	i;
 
-	i = 1; //we start by 1 to not count the len of the programs name .
-	len = (size - 2) * my_strlen(sep); //we dedicate the last string so we wont add a sep at the end of the string
+	i = 1;
+	len = (size - 2) * my_strlen(sep);
 	while (i < size)
 	{
 		len = len + my_strlen(str[i]);

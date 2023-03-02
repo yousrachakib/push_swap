@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:08:50 by yochakib          #+#    #+#             */
-/*   Updated: 2023/02/12 15:31:02 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:36:40 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	push(t_list **stack_a, t_list **stack_b, int a)
 {
-	int	temp;
+	int		temp;
 	t_list	*head;
-	
+
 
 	if (a == 1)
 	{
