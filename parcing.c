@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/02 01:38:03 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/03 16:46:25 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int	duplicate(char **split)
 	}
 	return (1);
 }
-// void leak()
-// {
-// 	system("leaks push_swap");
-// }
+void leak()
+{
+	system("leaks push_swap");
+}
 void	parcing(char *join, t_list **mystack)
 {
 	t_list	*node;
@@ -99,6 +99,7 @@ int	main(int ac, char **av)
 	
 	if (ac <= 2 || stack_storted(stack_a) == 1)
 		exit (0);
+		
 	if (size == 2)
 	{
 		if (stack_a->data > stack_a->next->data)
@@ -125,6 +126,7 @@ int	main(int ac, char **av)
 	// 	printf("%d\n", stack_b->data);
 	// 	stack_b = stack_b->next;
 	// }
-	// atexit(leak);
+	atexit(leak);
+	while(1);
 	return (0);
  }
