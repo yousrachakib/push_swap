@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:54:47 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 22:35:32 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:07:03 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	ft_putstr_fd(char *str, int fd);
 void	addfront_node(t_list **head, t_list *newnode);
 int		over_int(char **str);
 int		is_integer(char *str);
-long	ft_atoi(const char *str);
-size_t	my_strlen(const char*str);
-char	*my_strcat(char *dest, const char *src);
+long	ft_atoi(char *str);
+size_t	my_strlen(char	*str);
+char	*my_strcat(char *dest,char *src);
 int		isempty(int size, char **str);
 int		ft_total_len(char **str, char *sep, int size);
 char	*my_joint(int size, char **str, char *sep);
