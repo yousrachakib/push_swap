@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 22:40:55 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:58:32 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,22 @@ int	my_strcmp(char *s1, char *s2)
 	while (s1[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
+}
+
+void	free_stack(t_list	*stack)
+{
+	t_list	*temp;
+	t_list	*head;
+
+
+	head = stack;
+	while (head)
+	{
+		temp = head->next;
+		free(head);
+		head = temp;
+	}
+	head = NULL;
 }
 
 void    apply_one_action(t_list **stack_a, t_list **stack_b, char *action)
@@ -51,6 +67,10 @@ void    apply_one_action(t_list **stack_a, t_list **stack_b, char *action)
 		ft_putstr_fd("Error\n", 2);
 		exit (1);
 	}
+}
+void leak()
+{
+	system("leaks checker");
 }
 
 int	stack_storted(t_list *stack)
@@ -86,6 +106,7 @@ int	main(int ac, char **av)
 		exit (0);
 	str = my_joint(ac, av, " ");
 	parcing(str, &stack_a);
+	free(str);
 	action = get_next_line(0);
 	while (action)
 	{
@@ -96,5 +117,8 @@ int	main(int ac, char **av)
 		ft_putstr_fd("OK\n", 1);
 	else
 		ft_putstr_fd("KO\n", 1);
+	free_stack(stack_a);
+	free_stack(stack_b);
+	atexit(leak);
 	return (0);
 }
