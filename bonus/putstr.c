@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:48:33 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 22:42:13 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:49:01 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,19 @@ void	ft_putstr_fd(char *str, int fd)
 		write(fd, &str[i], 1);
 		i++;
 	}
+}
+
+void	free_stack(t_list	*stack)
+{
+	t_list	*temp;
+	t_list	*head;
+
+	head = stack;
+	while (head)
+	{
+		temp = head->next;
+		free(head);
+		head = temp;
+	}
+	head = NULL;
 }

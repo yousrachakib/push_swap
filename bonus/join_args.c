@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/03 17:07:46 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:51:32 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	my_strlen(char	*str)
 	return (len);
 }
 
-char	*my_strcat(char *dest,char *src)
+char	*my_strcat(char *dest, char *src)
 {
 	size_t	i;
 	size_t	j;

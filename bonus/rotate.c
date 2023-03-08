@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 17:05:33 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 22:42:49 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:57:30 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	rrotate_stack(t_list **stack, int a)
 	while (temp->next->next)
 		temp = temp->next;
 	temp->next = NULL;
-
 	addfront_node(stack, head);
 	if (a == 0)
 		ft_putstr_fd("rrb\n", 1);

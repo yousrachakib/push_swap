@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 20:58:23 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/02 01:31:13 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:37:07 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,7 @@ void	sort_500numbers(t_list	**stack_a, t_list	**stack_b, int size)
 		if ((*stack_a)->index > (chunk - (nextchunk / 2)))
 			push(stack_a, stack_b, 1);
 		else if ((*stack_a)->index <= (chunk - (nextchunk / 2)))
-		{
-			push(stack_a, stack_b, 1);
-			if ((*stack_a) != NULL && (*stack_a)->index > chunk)
-				rr(stack_a, stack_b);
-			else
-				rotate_stack(stack_b, 0);
-		}
+			top_half(stack_a, stack_b, chunk);
 		if (i == chunk)
 			chunk += nextchunk;
 	}

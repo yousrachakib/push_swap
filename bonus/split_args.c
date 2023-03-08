@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:42:31 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/07 17:07:17 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:57:49 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	**my_split(char const *s, char c)
 	{
 		s = ft_word((char *)s, c, res + i);
 		if (!s)
-			 split_free(res);
+			split_free(res);
 		i++;
 	}
 	return (res);

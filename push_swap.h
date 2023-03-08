@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 21:01:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/02 01:28:12 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 12:35:50 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct t_list
 }	t_list;
 
 //Algo
+void	top_half(t_list	**stack_a, t_list	**stack_b, int chunk);
 int		stack_storted(t_list *stack);
 void	push_back_to_a(t_list	**stack_b, t_list	**stack_a);
 void	free_stack(t_list	*stack);
