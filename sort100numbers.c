@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:40:37 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/08 12:29:09 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 17:35:26 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	sort_100numbers(t_list	**stack_a, t_list	**stack_b, int size)
 	i = 0;
 	chunk = size / 5;
 	nextchunk = chunk;
-
 	while (*stack_a)
 	{
 		while ((*stack_a) != NULL && (*stack_a)->index > chunk)

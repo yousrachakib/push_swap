@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/08 16:11:28 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 17:36:15 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	check_part1(char *action, t_list **stack_a, t_list **stack_b)
 
 void	apply_one_action(t_list **stack_a, t_list **stack_b, char *action)
 {
-	if (check_part1(action, stack_a, stack_b) == 1);
-
+	if (check_part1(action, stack_a, stack_b) == 1)
+		;
 	else if (my_strcmp(action, "rrb\n") == 0)
 		rrotate_stack(stack_b, 3);
 	else if (my_strcmp(action, "rrr\n") == 0)
@@ -107,5 +107,4 @@ int	main(int ac, char **av)
 	else
 		ft_putstr_fd("KO\n", 1);
 	return (0);
-	
 }
