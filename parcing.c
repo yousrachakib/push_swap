@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/08 17:34:17 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:13:03 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	int		size;
 	char	*str;
 
 	stack_b = NULL;
@@ -93,23 +92,8 @@ int	main(int ac, char **av)
 	parcing(str, &stack_a);
 	free(str);
 	add_index_to_node(stack_a);
-	size = list_size(stack_a);
 	if (ac <= 2 || stack_storted(stack_a) == 1)
 		exit (0);
-	if (size == 2)
-	{
-		if (stack_a->data > stack_a->next->data)
-			swap_2top_numbers(stack_a, 0);
-	}
-	else if (size == 3)
-		sort_3numbers(&stack_a);
-	else if (size >= 4 && size <= 30)
-		sort_5numbers(&stack_a, &stack_b);
-	else if (size >= 31 && size <= 210)
-		sort_100numbers(&stack_a, &stack_b, size);
-	else
-		sort_500numbers(&stack_a, &stack_b, size);
-	free_stack(stack_a);
-	free_stack(stack_b);
+	check_and_aplly(stack_a, stack_b);
 	return (0);
 }
