@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/07 13:57:20 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:07:12 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ int	duplicate(char **split)
 	}
 	return (1);
 }
-// void leak()
-// {
-// 	system("leaks push_swap");
-// }
+
 void	parcing(char *join, t_list **mystack)
 {
 	t_list	*node;
@@ -70,7 +67,6 @@ void	free_stack(t_list	*stack)
 	t_list	*temp;
 	t_list	*head;
 
-
 	head = stack;
 	while (head)
 	{
@@ -84,7 +80,7 @@ void	free_stack(t_list	*stack)
 int	main(int ac, char **av)
 {
 	t_list	*stack_a;
-	t_list *stack_b;
+	t_list	*stack_b;
 	int		size;
 	char	*str;
 
@@ -97,10 +93,8 @@ int	main(int ac, char **av)
 	free(str);
 	add_index_to_node(stack_a);
 	size = list_size(stack_a);
-	
 	if (ac <= 2 || stack_storted(stack_a) == 1)
 		exit (0);
-		
 	if (size == 2)
 	{
 		if (stack_a->data > stack_a->next->data)
@@ -116,6 +110,5 @@ int	main(int ac, char **av)
 		sort_500numbers(&stack_a, &stack_b, size);
 	free_stack(stack_a);
 	free_stack(stack_b);
-	// atexit(leak);
 	return (0);
- }
+}

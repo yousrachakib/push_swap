@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/07 18:07:39 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 16:11:28 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,5 @@ int	main(int ac, char **av)
 	else
 		ft_putstr_fd("KO\n", 1);
 	return (0);
+	
 }

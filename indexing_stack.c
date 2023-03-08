@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 19:43:09 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 19:03:37 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:25:09 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	return_min_index(t_list	*stack)
 
 	temp1 = stack;
 	temp = stack;
-
 	while (temp1)
 	{
 		if (temp1->index == -1)
@@ -30,7 +29,6 @@ int	return_min_index(t_list	*stack)
 		}
 		temp1 = temp1->next;
 	}
-
 	while (temp)
 	{
 		if (temp->data < value && temp->index == -1)

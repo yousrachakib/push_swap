@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 21:58:44 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 21:33:21 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:26:05 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,3 @@ int	return_minvalue(t_list	*stack)
 	}
 	return (value);
 }
-

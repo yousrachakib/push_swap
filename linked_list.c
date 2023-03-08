@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:54:32 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/01 21:33:11 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:25:49 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	addfront_node(t_list **head, t_list *newnode)
 	t_list	*temp;
 
 	temp = *head;
-
 	if (!*head)
 	{
 		*head = newnode;
