@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:54:47 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/07 18:00:25 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:01:55 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct t_list
 	struct t_list	*next;
 }	t_list;
 
+int		check_part1(char *action, t_list **stack_a, t_list **stack_b);
 void	free_stack(t_list	*stack);
 int		split_free(char **res);
 void	skip_zeroes(char	*str);

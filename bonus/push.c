@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:08:50 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/07 17:56:34 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:09:50 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	push(t_list **stack_a, t_list **stack_b, int a, int flag)
 	t_list	*head;
 
 	if (a == 1)
-		push_b(stack_a, stack_b, 1);
+		push_b(stack_a, stack_b, 3);
 	else if (a == 0)
 	{
 		if (!*stack_b)

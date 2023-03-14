@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 HEADER = bonus.h
 OBJS = $(SRCS:.c=.o)
 
-all : $(NAME)
+bonus : $(NAME)
 
 $(NAME) : $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
@@ -28,4 +28,4 @@ clean :
 		rm -rf $(OBJS)
 fclean : clean
 		rm -rf $(NAME)
-re : clean fclean all
+re : clean fclean bonus

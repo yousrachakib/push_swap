@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/08 17:36:15 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/13 20:06:25 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	my_strcmp(char *s1, char *s2)
 
 int	check_part1(char *action, t_list **stack_a, t_list **stack_b)
 {
-	if (my_strcmp(action, "pa\n") == 0)
+	if (my_strcmp(action, "pb\n") == 0)
 		push(stack_a, stack_b, 1, 3);
 	else if (my_strcmp(action, "pa\n") == 0)
 		push(stack_a, stack_b, 0, 3);
