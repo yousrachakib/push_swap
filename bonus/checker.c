@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 21:48:00 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/13 20:06:25 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/14 21:47:29 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,10 @@ int	stack_storted(t_list *stack)
 	}
 	return (1);
 }
+void	leaks()
+{
+	system("leaks checker");
+}
 
 int	main(int ac, char **av)
 {
@@ -89,6 +93,8 @@ int	main(int ac, char **av)
 	char	*str;
 	char	*action;
 
+
+	atexit(leaks);
 	stack_b = NULL;
 	stack_a = NULL;
 	if (ac == 1)
@@ -100,11 +106,14 @@ int	main(int ac, char **av)
 	while (action)
 	{
 		apply_one_action(&stack_a, &stack_b, action);
+		free(action);
 		action = get_next_line(0);
 	}
 	if (stack_storted(stack_a) == 1 && stack_b == NULL)
 		ft_putstr_fd("OK\n", 1);
 	else
 		ft_putstr_fd("KO\n", 1);
+	free_stack(stack_a);
+	free_stack(stack_b);
 	return (0);
 }

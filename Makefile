@@ -21,14 +21,20 @@ OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS)  $(HEADER)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+bonus :
+	$(MAKE) -C bonus
 
 %.o : %.c $(HEADER)
 		@$(CC) $(CFLAGS) -c $< -o $@
 
 clean : 
 		rm -rf $(OBJS)
+		$(MAKE) clean  -C bonus
 fclean : clean
 		rm -rf $(NAME)
+		$(MAKE) fclean  -C bonus
 re : clean fclean all
+
+.PHONY : all bonus clean fclean re

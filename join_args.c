@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:21:52 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/08 15:25:30 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/14 21:28:08 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ char	*my_joint(int size, char **str, char *sep)
 			my_strcat(result, sep);
 		i++;
 	}
+	result[len] = 0;
 	return (result);
 }

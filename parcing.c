@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 20:58:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/09 15:56:37 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/14 21:40:18 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	main(int ac, char **av)
 	parcing(str, &stack_a);
 	free(str);
 	add_index_to_node(stack_a);
-	if (ac <= 2 || stack_storted(stack_a) == 1)
+	if (stack_storted(stack_a) == 1)
 		exit (0);
 	check_and_aplly(stack_a, stack_b);
 	return (0);

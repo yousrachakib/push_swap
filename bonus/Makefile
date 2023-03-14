@@ -10,7 +10,7 @@ SRCS = args_to_int.c \
 	   rotate.c \
 	   split_args.c \
 	   swap.c 
-NAME = checker
+NAME = ../checker
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 HEADER = bonus.h

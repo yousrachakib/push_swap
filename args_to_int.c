@@ -6,7 +6,7 @@
 /*   By: yochakib <yochakib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 17:26:55 by yochakib          #+#    #+#             */
-/*   Updated: 2023/03/03 16:56:04 by yochakib         ###   ########.fr       */
+/*   Updated: 2023/03/14 21:28:45 by yochakib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	over_int(char **str)
 	while (str[i])
 	{
 		j = ft_atoi(str[i]);
-		if (j < INT_MIN || j > INT_MAX)
+		if (j <= INT_MIN || j >= INT_MAX)
 			return (0);
 		i++;
 	}
